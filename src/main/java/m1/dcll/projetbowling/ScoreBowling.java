@@ -40,7 +40,7 @@ public class ScoreBowling {
         Iterator<Jeu> it = tabJeu.iterator();
 
         while (it.hasNext()){
-            scoreJeu += it.next().getScore();
+             scoreJeu += it.next().getScore();
         }
 
         return scoreJeu;
