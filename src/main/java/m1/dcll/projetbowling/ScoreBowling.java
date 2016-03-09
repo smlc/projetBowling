@@ -12,7 +12,7 @@ public class ScoreBowling {
     }
 
     public boolean valideSequence(){
-        if(tabJeu.size()<10)
+        if(tabJeu.size()<10) return  false;
 
         if( (tabJeu.get(9) instanceof Strike) && (tabJeu.size()!=12)) return false;
 
