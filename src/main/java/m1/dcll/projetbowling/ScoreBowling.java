@@ -17,7 +17,7 @@ public class ScoreBowling {
 
         if( (tabJeu.get(9) instanceof Spare) && (tabJeu.size()!=11)) return false;
 
-        if (tabJeu.get(9) instanceof Frame) return !(tabJeu.size()==10);
+        if ( (tabJeu.get(9) instanceof Frame) && (tabJeu.size()==10)) return false;
 
         for(int i=0; i< tabJeu.size(); i++){
             return vilideScore(tabJeu.get(i));
