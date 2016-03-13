@@ -1,4 +1,8 @@
 *.class
-/target
+target
 *.iml
+<<<<<<< HEAD
 /.idea
+=======
+.idea
+>>>>>>> marlon
