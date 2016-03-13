@@ -8,8 +8,11 @@ public class Frame extends Jeu {
     public Frame(int score){
         this.score = score;
     }
+
     @Override
     public int getScore() {
         return this.score;
     }
+
+
 }

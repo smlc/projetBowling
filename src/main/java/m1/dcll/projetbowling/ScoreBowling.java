@@ -38,9 +38,13 @@ public class ScoreBowling {
     public int calculeScore(){
         int scoreJeu = 0;
         Iterator<Jeu> it = tabJeu.iterator();
+            int score = 0;
 
+        System.out.println(scoreJeu);
         while (it.hasNext()){
-             scoreJeu += it.next().getScore();
+            score =  it.next().getScore();
+            scoreJeu +=score;
+            System.out.println(score);
         }
 
         return scoreJeu;

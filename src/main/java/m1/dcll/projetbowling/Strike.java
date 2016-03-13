@@ -13,12 +13,15 @@ public class Strike extends Jeu{
         score = 10;
         premierJeu = premier;
         deuxiemeJeu = deuxieme;
+        score = score +premierJeu.getScore() + deuxiemeJeu.getScore();
     }
     public Strike(){
         score =10;
     }
     @Override
     public int getScore() {
-        return score;
+        return this.score ;
     }
+
+
 }
