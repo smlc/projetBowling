@@ -36,15 +36,13 @@ public class ScoreBowling {
     }
 
     public int calculeScore(){
-        int scoreJeu = 0;
-        Iterator<Jeu> it = tabJeu.iterator();
-            int score = 0;
 
-        System.out.println(scoreJeu);
+        int scoreJeu = 0;
+        System.out.println(tabJeu.size());
+        Iterator<Jeu> it = tabJeu.subList(0,10).iterator();
+
         while (it.hasNext()){
-            score =  it.next().getScore();
-            scoreJeu +=score;
-            System.out.println(score);
+            scoreJeu += it.next().getScore();
         }
 
         return scoreJeu;

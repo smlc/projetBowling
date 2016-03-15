@@ -5,6 +5,7 @@ package m1.dcll.projetbowling;
  */
 public class Frame extends Jeu {
     int score;
+
     public Frame(int score){
         this.score = score;
     }
@@ -12,6 +13,11 @@ public class Frame extends Jeu {
     @Override
     public int getScore() {
         return this.score;
+    }
+
+    @Override
+    public int getQuille() {
+        return score;
     }
 
 

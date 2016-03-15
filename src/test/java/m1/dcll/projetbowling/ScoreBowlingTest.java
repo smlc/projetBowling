@@ -16,7 +16,7 @@ public class ScoreBowlingTest {
     public void testCalculeScore() throws Exception {
 
         //Given
-        Jeu strike11 = new Strike();
+       Jeu strike11 = new Strike();
         assertEquals(10,strike11.getScore());
         Jeu strike12 = new Strike();
         assertEquals(10,strike12.getScore());
@@ -52,13 +52,12 @@ public class ScoreBowlingTest {
         tabJeu.add(strike8);
         tabJeu.add(strike9);
         tabJeu.add(strike10);
-       /* tabJeu.add(strike11);
-        tabJeu.add(strike12);*/
+        tabJeu.add(strike11);
+        tabJeu.add(strike12);
         //When
         ScoreBowling scoreBowling = new ScoreBowling(tabJeu);
 
         //Then
-
-        //assertEquals(300,scoreBowling.calculeScore());
+        assertEquals(300,scoreBowling.calculeScore());
     }
 }
