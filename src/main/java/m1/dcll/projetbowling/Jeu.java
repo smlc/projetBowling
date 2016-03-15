@@ -5,4 +5,5 @@ package m1.dcll.projetbowling;
  */
 public abstract class Jeu {
     public abstract int getScore();
+    public abstract int getQuille();
 }

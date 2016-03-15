@@ -5,16 +5,28 @@ package m1.dcll.projetbowling;
  */
 public class Spare extends Jeu{
     private int score;
+    public int quille;
     private Jeu jeu;
-    public Spare(int score, Jeu jeu){
+    public Spare(Jeu jeu,int quille){
         this.jeu = jeu;
-        this.score =score;
+        this.quille = quille;
+        this.score = quille + jeu.getQuille();
+
     }
-    public Spare(int score){
-        this.score =score;
+    public Spare( int quille){
+
+        this.quille = quille;
+        this.score = quille;
     }
     @Override
     public int getScore() {
         return score;
     }
+
+
+    public int getQuille() {
+        return quille;
+    }
+
+
 }

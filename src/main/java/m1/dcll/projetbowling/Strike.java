@@ -6,19 +6,30 @@ package m1.dcll.projetbowling;
 public class Strike extends Jeu{
 
     private int score;
+    private int quille;
     private Jeu premierJeu;
     private Jeu deuxiemeJeu;
 
     public Strike(Jeu premier, Jeu deuxieme){
-        score = 10;
+        quille = 10;
         premierJeu = premier;
         deuxiemeJeu = deuxieme;
+        score = quille + premierJeu.getQuille() + deuxiemeJeu.getQuille();
     }
     public Strike(){
-        score =10;
+        score = 10;
+        quille = 10;
     }
+
     @Override
     public int getScore() {
-        return score;
+        return this.score ;
     }
+
+    @Override
+    public int getQuille() {
+        return quille;
+    }
+
+
 }
