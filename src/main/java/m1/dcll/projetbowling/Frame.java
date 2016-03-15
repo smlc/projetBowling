@@ -1,15 +1,24 @@
 package m1.dcll.projetbowling;
 
 /**
- * Created by bah on 09/03/16.
+ *  @author mars
  */
+
 public class Frame extends Jeu {
     int score;
 
-    public Frame(int score){
+    /**
+     *
+     *   @param score
+     */
+    public Frame(int score) {
         this.score = score;
     }
 
+    /**
+     *
+     * @return Le score réalisée lors du frame
+     */
     @Override
     public int getScore() {
         return this.score;

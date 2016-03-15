@@ -10,38 +10,39 @@ import java.util.List;
 public class ScoreBowling {
     private List<Jeu> tabJeu;
 
-    public ScoreBowling(List<Jeu> jeux){
+    public ScoreBowling(List<Jeu> jeux) {
         tabJeu = new ArrayList<Jeu>(jeux);
     }
 
-    public boolean valideSequence(){
+    public boolean valideSequence() {
 
-        if( (tabJeu.get(9) instanceof Strike) && (tabJeu.size()!=12)) return false;
+        if ((tabJeu.get(9) instanceof Strike) && (tabJeu.size() != 12)) return false;
 
-        if( (tabJeu.get(9) instanceof Spare) && (tabJeu.size()!=11)) return false;
+        if ((tabJeu.get(9) instanceof Spare) && (tabJeu.size() != 11)) return false;
 
-        if ( (tabJeu.get(9) instanceof Frame) && (tabJeu.size()==10)) return false;
+        if ((tabJeu.get(9) instanceof Frame) && (tabJeu.size() == 10)) return false;
 
-        for(int i=0; i< tabJeu.size(); i++){
+        for (int i = 0; i < tabJeu.size(); i++) {
             return valideScore(tabJeu.get(i));
         }
 
         return true;
     }
-    private boolean valideScore(Jeu jeu){
 
-        if(jeu instanceof Spare) return  !(((Spare)jeu).getScore() ==10);
-        if(jeu instanceof Frame) return !(((Frame)jeu).getScore()<10);
+    private boolean valideScore(Jeu jeu) {
+
+        if (jeu instanceof Spare) return !(((Spare) jeu).getScore() == 10);
+        if (jeu instanceof Frame) return !(((Frame) jeu).getScore() < 10);
         return true;
     }
 
-    public int calculeScore(){
+    public int calculeScore() {
 
         int scoreJeu = 0;
         System.out.println(tabJeu.size());
-        Iterator<Jeu> it = tabJeu.subList(0,10).iterator();
+        Iterator<Jeu> it = tabJeu.subList(0, 10).iterator();
 
-        while (it.hasNext()){
+        while (it.hasNext()) {
             scoreJeu += it.next().getScore();
         }
 

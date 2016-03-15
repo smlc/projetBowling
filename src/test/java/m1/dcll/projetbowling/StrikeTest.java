@@ -2,7 +2,7 @@ package m1.dcll.projetbowling;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Created by mars on 13/03/16.

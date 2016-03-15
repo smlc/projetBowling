@@ -4,12 +4,10 @@ import java.util.ArrayList;
 
 /**
  * Hello world!
- *
  */
-public class App 
-{
+public class App {
 
-    public static void main( String[] args ){
+    public static void main(String[] args) {
         ArrayList<Jeu> tabJeu = new ArrayList<Jeu>();
 
         Strike strike11 = new Strike();
@@ -38,6 +36,6 @@ public class App
         tabJeu.add(strike11);
         tabJeu.add(strike12);
         ScoreBowling scoreBowling = new ScoreBowling(tabJeu);
-        System.out.println(" Valide : "+ scoreBowling.valideSequence());
+        System.out.println(" Valide : " + scoreBowling.valideSequence());
     }
 }
